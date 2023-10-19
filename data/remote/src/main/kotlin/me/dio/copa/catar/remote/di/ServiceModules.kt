@@ -8,6 +8,6 @@ import retrofit2.create
 
 @Module
 class ServiceModules {
-    @Provides
-    fun provideAuthService(retrofit: Retrofit) = retrofit.create<MatchesServices>()
+        @Provides
+        fun provideAuthService(retrofit: Retrofit) = retrofit.create<MatchesServices>()
 }

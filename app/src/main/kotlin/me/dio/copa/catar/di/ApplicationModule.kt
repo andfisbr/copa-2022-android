@@ -13,16 +13,16 @@ import me.dio.copa.catar.remote.di.RemoteModule
 import me.dio.copa.catar.remote.di.ServiceModules
 
 @Module(
-    includes = [
-        DataModule::class,
-        LocalModule::class,
-        RemoteModule::class,
-        NetworkModule::class,
-        ServiceModules::class,
-    ]
+        includes = [
+                DataModule::class,
+                LocalModule::class,
+                RemoteModule::class,
+                NetworkModule::class,
+                ServiceModules::class,
+        ]
 )
 @InstallIn(SingletonComponent::class)
 abstract class ApplicationModule {
-    @Binds
-    abstract fun bindContext(application: Application): Context
+        @Binds
+        abstract fun bindContext(application: Application): Context
 }

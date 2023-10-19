@@ -7,7 +7,7 @@ import me.dio.copa.catar.domain.repositories.MatchesRepository
 
 @Module
 interface DataModule {
-
-    @Binds
-    fun providesMatchesRepository(impl: MatchesRepositoryImpl): MatchesRepository
+        
+        @Binds
+        fun providesMatchesRepository(impl: MatchesRepositoryImpl): MatchesRepository
 }

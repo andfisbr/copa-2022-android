@@ -8,12 +8,12 @@ import me.dio.copa.catar.remote.services.MatchesServices
 import javax.inject.Inject
 
 class MatchDataSourceRemote @Inject constructor(
-    private val service: MatchesServices
-) : MatchesDataSource.Remote {
-
-    override suspend fun getMatches(): List<MatchDomain> {
-        return runCatching {
-            service.getMatches()
-        }.getOrThrowDomainError().toDomain()
-    }
+        private val service: MatchesServices,
+): MatchesDataSource.Remote {
+        
+        override suspend fun getMatches(): List<MatchDomain> {
+                return runCatching {
+                        service.getMatches()
+                }.getOrThrowDomainError().toDomain()
+        }
 }
